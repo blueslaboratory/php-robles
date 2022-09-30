@@ -1,0 +1,9 @@
+{
+    "require": {
+        "dompdf/dompdf": "^1.1",
+        "stefangabos/zebra_pagination": "^2.4",
+        "masterexploder/phpthumb": "^2.1",
+        "intervention/image": "^2.7",
+        "firephp/firephp-core": "^0.5.3"
+    }
+}

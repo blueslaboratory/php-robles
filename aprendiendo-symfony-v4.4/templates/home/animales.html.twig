@@ -1,0 +1,100 @@
+{# empty Twig template #}
+{# Video 417 #}
+
+{% extends 'layouts/master.html.twig' %}
+
+{% block titulo %} Animales {% endblock %}
+
+{% block cabecera %}
+    {{ parent() }} {# Imprime el contenido de la plantilla padre: master.html.twig #}
+    <h2> {{ title }} </h2>
+
+{% endblock %}
+
+{% block contenido %}
+    {# al no tener en este bloque {{ parent() }}, te sobreescribe #}
+    
+    <h3> Tu nombre es: {{ nombre }}</h3>
+    <h3> Tus apellidos son: {{ apellidos }}</h3>
+    <hr>
+    
+    
+    
+    
+    {# Crear variable en twig, video 423 #}
+    {% set perro = 'Pastor aleman' %}
+    <h4> {{ perro }} </h4>
+    
+    
+    
+    {# Trabajar con arrays, video 424 #}
+    {{ dump(animales) }}
+    <p>Imprimo el array[0] de animales: {{ animales[0] }} </p> 
+    
+    
+    
+    {# Trabajar con arrays asociativos, video 424 #}
+    {{ dump(aves) }}
+    {{ aves.tipo ~ ' - ' ~ aves.color }}
+    <hr>
+    
+    
+    {# Condicional, video 425 #}
+    <h1>Condicional if</h1>
+    {% if aves.tipo == 'palomo' %}
+        <h1>¡Cuidado! Un palomo volador</h1>
+    {% else %}
+        <h2>No hay palomos a la vista</h2>
+    {% endif %}
+    <hr>
+    
+    
+    
+    {# Bucle, video 425 #}
+    <h1>Bucle for each</h1>
+    {% if animales|length >= 1 %}
+        <ul>
+            {% for animal in animales %}
+                <li>
+                    {{ animal }}
+                </li>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% endif %}
+    
+    
+    
+    {#
+    {% for i in 0..10 %}
+    Imprimeme los numeros desde 0 hasta 10
+    #}
+    <h1>Bucle for i in 0..animales</h1>
+    {% for i in 0..animales|length %}
+        {{ i }}<br/>
+    {% endfor %}
+    <hr>
+    
+    
+    
+    {# Video 426: Starts with, Ends with #}
+    <h1>Starts with</h1>
+    {% if aves.color starts with 'g'%}
+        <h3>El color del {{ aves.tipo }} es: {{ aves.color }}</h3>
+        <h3>Y empieza por G!</h3>
+    {% endif %}
+    <hr>
+    
+    <h1>Ends with</h1>
+    {% if aves.color ends with 's'%}        
+        <h3>El color del {{ aves.tipo }} es: {{ aves.color }}</h3>
+        <h3>Y termina en S!</h3>
+    {% endif %}
+    <hr>
+    
+    
+    {# Video 428: Starts with, Ends with #}
+    {{ include('partials/funciones.html.twig', {'nombre':'Alejandro'}) }}
+        
+    
+{% endblock %}

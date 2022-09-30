@@ -1,0 +1,12 @@
+Hola soy un archivo de texto,
+¿que tal estas?<br/>**** 
+Soy un texto metido desde PHP ****<br/>
+**** Soy un texto metido desde PHP ****<br/>
+**** Soy un texto metido desde PHP ****<br/>
+**** Soy un texto metido desde PHP ****<br/>
+**** Soy un texto metido desde PHP ****<br/>
+**** Soy un texto metido desde PHP ****<br/>
+**** Soy un texto metido desde PHP 20211115 ****<br/>
+**** Soy un texto metido desde PHP 20211115 ****<br/>
+**** Soy un texto metido desde PHP 20211115 ****<br/>
+**** Soy un texto metido desde PHP 20211115 ****<br/>

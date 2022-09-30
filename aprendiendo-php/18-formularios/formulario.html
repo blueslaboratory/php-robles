@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+http://localhost/master-php/aprendiendo-php/18-formularios/formulario.html
+
+para un formulario lo mas recomendable es usar POST en vez de GET
+-->
+<html>
+    <head>
+        <title>Formulario HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Formulario HTML</h1>
+         
+        <!--
+        action="guardar.php" 
+        Al darle a submit, llevame a guardar.php
+        -->
+        <form action="guardar.php" method="POST">
+            Titulo:<br/>
+            <input type="text" name="titulo"><br/>
+            
+            Descripcion:<br/>
+            <textarea name="descripcion"></textarea><br/>
+            
+            <input type="submit" value="enviar"/>
+            
+        </form>
+    </body>
+</html>

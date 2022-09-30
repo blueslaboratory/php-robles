@@ -1,0 +1,58 @@
+security:
+    # 470. Guardar el usuario registrado
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+            cost: 4
+            
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        users_in_memory: { memory: null }
+        # 475. Login de usuarios
+        proveedor:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            # 475. Login de usuarios
+            anonymous: true
+            # provider: users_in_memory
+            form_login:
+                login_path: login
+                check_path: login
+                provider: proveedor
+                
+            logout:
+                path: /logout
+                target: /login
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+            
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    
+    
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+        
+        # 486. Control de acceso
+        # si yo quiero que la ruta tarea: 
+        # http://proyecto-symfony.com.devel/tareas
+        # http://proyecto-symfony.com.devel/tarea/3
+        # solo sea visible por los usuarios registrados con el ROLE_USER
+         - { path: ^/tareas, roles: ROLE_USER }
+         - { path: ^/tarea, roles: ROLE_USER }
+         - { path: ^/crear-tarea, roles: ROLE_USER }
+         - { path: ^/mis-tareas, roles: ROLE_USER }
+         - { path: ^/editar-tarea, roles: ROLE_USER }
+         - { path: ^/borrar-tarea, roles: ROLE_USER }
+         

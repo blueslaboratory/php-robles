@@ -1,0 +1,41 @@
+{# empty Twig template #}
+{# Video 428: Includes #}
+
+
+{# Video 427: Funciones predefinidas twig #}
+
+<h1>Funciones predefinidas twig</h1>
+Minimo: {{ min ([9,11,6,22,56, -3])}} <br>
+Maximo: {{ max ([9,11,6,22,56, -3])}} <br>
+{{ dump(animales) }} <br>
+Random: {{ random(animales) }} <br>
+
+{% for i in range(0,100, 5) %}
+    {{ i }}, 
+{% endfor %}
+
+<h3>By: {{ nombre }} </h3>
+<hr>
+
+
+
+{# 
+Video 429: Filtros 
+https://twig.symfony.com/doc/2.x/
+#}
+<h1>Filtros</h1>
+{{ animales|length }}
+
+{% set email = '    email@email.com    '%}
+{{ dump(email|trim) }}
+{{ dump(email|upper) }}
+{{ dump(email|lower) }}
+{{ dump(email|trim|upper) }}
+<hr>
+
+
+
+{# Video 430: Crear extensiones #}
+<h1>Extensiones personalizadas</h1>
+{{ multiplicar(12)|raw }}
+{{ 3|multiplicar|raw }}

@@ -1,0 +1,27 @@
+{# 479. Detalle de la tarea #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Mi usuario{% endblock %}
+
+{% block body %}
+    
+    <div class="example-wrapper">
+        <h2>Mi usuario - Hoja de detalle ✅</h2>
+        <p> <b>Nombre:</b> {{user.name}} </p>
+        <p> <b>Apellidos:</b> {{user.surname}} </p>
+        <p> <b>Email:</b> {{user.email}} </p>
+        {#
+        <p> <b>Password sin hashear:</b> {{ pw }} </p>
+        #}
+        <p> <b>Tu password hasheada:</b> {{user.password}} </p>
+        
+        <h2>Sesion - Hoja de detalle ✅</h2>
+        <p> <b>La sesion es del usuario: </b> {{name}} {{ surname }} </p>
+        <p> <b>Id del usuario de la sesion: </b> {{id}} </p>
+        
+        <br/>
+        
+        <p>¡Esta es tu pagina de usuario!</p>
+        
+    </div>
+{% endblock %}

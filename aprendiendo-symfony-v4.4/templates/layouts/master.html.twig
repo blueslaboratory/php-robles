@@ -1,0 +1,31 @@
+{# empty Twig template #}
+<!-- Video 422 -->
+
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {%block titulo %} Inicio {% endblock %} - Master en PHP de Victor Robles
+        </title>
+    </head>
+    <body>
+        <div id="header">
+            {% block cabecera %}
+                <h1>Cabecera de la plantilla </h1>
+                <hr>
+            {% endblock %}
+        </div>
+        
+        <section id="content">
+            {% block contenido %}
+                <p>Contenido por defecto </p>
+            {% endblock %}
+        </section>
+        
+        <footer>
+            <hr>
+            Blueslaboratory
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+Orden del curso de Udemy Master en PHP, SQL, POO, MVC, Laravel, Symfony, WordPress + by Victor Robles
+
+1. aprendiendo-php
+2. aprendiendo-sql
+3. aprendiendo-php-mysql
+4. proyecto-php
+5. aprendiendo-php-poo
+6. aprendiendo-php-mvc
+7. aprendiendo-librerias-php
+8. proyecto-php-poo
+9. aprendiendo-laravel-v5
+10. proyecto-laravel
+11. aprendiendo-symfony-v4.4
+12. proyecto-symfony
+13. proyecto-symfony-crud
+14. pruebas-larabel6 -> ((eliminado))
+
+________________________________________
+INFO IMPORTANTE
+El puerto de MYSQL esta configurado para ser 3308
+
+Para hacer funcionar el proyecto:
+1. Cambiar la version de PHP en el wamp64-2 a PHP 7.1.33
+
+2. Cambiar la variable de entorno PATH de wamp64-2
+    Panel de control\Todos los elementos de Panel de control\Sistema\Config avanzada del sistema
+    Variable de entorno -> variables del sistema -> PATH
+    F:\wamp64-2\bin\php\php7.1.33;
+    Anteriormente:
+    F:\wamp64-2\bin\php\php8.1.0;
+
+3. Desde la consola de comandos:
+    >php -v
+    Comprobamos que estamos en php 7.1.33
+    Una vez comprobado ya deberia de funcionar el proyecto de Laravel
+
+________________________________________
+AGREGAR HOSTS VIRTUALES:
+Editar este archivo de texto:
+F:\wamp64-2\bin\apache\apache2.4.51\conf\extra\
+httpd-vhosts.conf
+
+Y este:
+C:\Windows\System32\drivers\etc\
+hosts
+Agregando esta linea:
+127.0.0.1	aprendiendo-symfony.com.devel
+127.0.0.1	proyecto-symfony.com.devel

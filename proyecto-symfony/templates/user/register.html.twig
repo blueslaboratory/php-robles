@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Registro de usuarios
+    {# is defined comprueba que existe la variable edit, es un isset() #}
+    {% if edit is defined %}
+        Editar registro de usuarios
+    {%else%}
+        Registro de usuarios
+    {%endif%}
+{% endblock %}
+
+{% block body %}
+    
+    <div class="example-wrapper">
+        <h2>
+            {# 484. Edicion de tareas #}
+            {% if edit is defined %}
+                Editar registro de usuarios ✅
+            {%else%}
+                Registro de usuarios ✅
+            {%endif%}
+        </h2>
+    
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+

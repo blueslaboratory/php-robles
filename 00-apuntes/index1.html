@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>Mi primera web</title>
+	</head>
+	<body>
+		<h1>Titulo de mi web</h1>
+		<h2>Bienvenidos a mi web</h2>
+
+		
+		<hr>
+		<h3>Imagenes en HTML</h3>
+			<img src="images/doge.jpg" alt="imagen de un perro" title="foto de perro" height="100px" />
+			
+		
+		<hr>
+		<h3>Tercer encabezado en la pagina</h3>
+
+		<p>	Hola que tal desde este curso:</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			<strong>quis nostrud exercitation ullamco laboris </strong>
+			<em>consequat. Duis aute irure dolor in reprehenderit</em>
+			<span id="resaltado" class="rojo amarillo">cillum do</span>
+			<i>proident</i>, 
+			<blockquote>sunt in culpa qui officia deserunt m</blockquote>
+		</p>
+
+		
+
+
+		<hr>
+		<h3>Listado de frutas</h3>
+			<ol>
+				<li>Manzana</li>
+					<ul>
+						<li>Roja</li>
+						<li>Verde</li>
+						<li>Amarilla</li>
+					</ul>
+				<li>Naranja</li>
+				<li>Pera</li>
+				<li>Sandia</li>
+			</ol>
+
+		
+		<hr>
+		<h3>Tablas</h3>
+
+		<table border="1">
+			<tr>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>Pais</th>
+			</tr>
+			<tr>
+				<td rowspan="2">Victor</td>
+				<td>Robles</td>
+				<td>Espana</td>
+			</tr>
+			<tr>	
+				<td colspan="2">Lopez</td>								
+			</tr>
+		</table>
+
+
+
+		<hr>
+		<h3>Formulario</h3>
+		<form>
+			<p>
+				<label>Nombre</label>
+				<input type="text" name="nombre" placeholder="Escribe tu nombre" />
+			</p>
+			<p>
+				<label for="descripcion">Descripcion:</label>
+				<br>
+				<textarea name="descripcion"></textarea>
+			</p>
+
+			<input type="radio" name="genero" value="hombre"> Hombre 
+			<input type="radio" name="genero" value="mujer"> Mujer 
+			<input type="radio" name="genero" value="android"> Android 
+			<br>
+			<br>
+
+			<select name="generodos">
+				<option value="hombre">Hombre</option>
+				<option value="mujer">Mujer</option>
+				<option value="nada">Nada</option>
+			</select>
+			<br>
+			<br>
+
+			<input type="submit" value="Enviar Formulario">
+		</form>
+		
+
+
+	</body>
+</html>
